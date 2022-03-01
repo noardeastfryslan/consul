@@ -1,0 +1,37 @@
+// Custom styles
+// 1. General
+//
+
+// 1. General
+// --------------------
+
+@font-face {
+  font-family: "Noardeast Caps";
+  font-style: normal;
+  font-weight: 300;
+  src: font-url("noardeast_caps-webfont.woff2") format("woff2");
+  src: font-url("noardeast_caps-webfont.woff") format("woff");
+}
+
+body,
+p,
+a {
+  font-family: "Arial", "Montserrat", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noardeast Caps", "Arial", "Montserrat", sans-serif !important;
+}
+
+.top-bar-title {
+  background: transparent;
+
+  &::before {
+    content: none;
+  }
+}
