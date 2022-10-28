@@ -13,6 +13,13 @@
   src: font-url("noardeast_caps-webfont.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Anivers";
+  font-style: normal;
+  font-weight: normal;
+  src: font-url("anivers_regular.woff") format("woff");
+}
+
 body,
 p,
 a {
@@ -34,4 +41,8 @@ h6 {
   &::before {
     content: none;
   }
+}
+
+.home-page .header-card h3 {
+  font-family: "Anivers", "Arial", "Montserrat", sans-serif !important;
 }
