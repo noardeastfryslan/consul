@@ -175,12 +175,13 @@ describe "Polls" do
       expect(page).to have_link("Poll with stats", href: stats_poll_path(poll.slug))
     end
 
-    scenario "Poll title link to results if enabled" do
+    scenario "Poll title and button link to results if enabled" do
       poll = create(:poll, :expired, name: "Poll with results", stats_enabled: true, results_enabled: true)
 
       visit polls_path(filter: "expired")
 
       expect(page).to have_link("Poll with results", href: results_poll_path(poll.slug))
+      expect(page).to have_link("Poll ended", href: results_poll_path(poll.slug))
     end
 
     scenario "Shows SDG tags when feature is enabled" do

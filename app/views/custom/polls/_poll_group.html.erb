@@ -73,11 +73,16 @@
                               days: distance_of_time_in_words(Time.current, poll.ends_at + 1.day))) %>
             </p>
           <% end %>
-          <%= link_to poll_path(id: poll.slug || poll.id), class: "button expanded" do %>
-            <% if poll.expired? %>
-              <%= t("polls.index.participate_button_expired") %>
-            <% else %>
-              <%= t("polls.index.participate_button") %>
+          <% if can?(:results, poll) %>
+            <%= link_to t("polls.index.participate_button_expired"),
+                        results_poll_path(id: poll.slug || poll.id), class: "button expanded" %>
+          <% else %>
+            <%= link_to poll_path(id: poll.slug || poll.id), class: "button expanded" do %>
+              <% if poll.expired? %>
+                <%= t("polls.index.participate_button_expired") %>
+              <% else %>
+                <%= t("polls.index.participate_button") %>
+              <% end %>
             <% end %>
           <% end %>
         </div>
