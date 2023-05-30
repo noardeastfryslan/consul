@@ -68,7 +68,7 @@
         </div>
         <div class="table-cell align-bottom">
           <% unless poll.expired? %>
-            <p class="small text-right">
+            <p class="text-center">
               <%= sanitize(t("polls.index.remaining",
                               days: distance_of_time_in_words(Time.current, poll.ends_at + 1.day))) %>
             </p>
