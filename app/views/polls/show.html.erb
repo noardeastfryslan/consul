@@ -50,7 +50,7 @@
       </div>
       <div class="row padding">
         <% question.answers_with_content.each do |answer| %>
-          <div class="small-12 medium-6 column end answer <%= cycle("first", "float-right") %>">
+          <div class="small-12 medium-4 column end answer <%= cycle("first", "float-right") %>">
             <h3><%= answer.title %></h3>
 
             <% if answer.images.any? %>
