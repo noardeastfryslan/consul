@@ -1,5 +1,6 @@
 // Custom styles
 // 1. General
+// 2. Polls
 //
 
 // 1. General
@@ -45,4 +46,14 @@ h6 {
 
 .home-page .header-card h3 {
   font-family: "Anivers", "Arial", "Montserrat", sans-serif !important;
+}
+
+// 2. Polls
+// --------------------
+
+.polls-show {
+
+  h1 {
+    font-size: rem-calc(34);
+  }
 }
