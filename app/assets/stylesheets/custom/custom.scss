@@ -44,8 +44,12 @@ h6 {
   }
 }
 
-.home-page .header-card h3 {
-  font-family: "Anivers", "Arial", "Montserrat", sans-serif !important;
+.home-page .header-card,
+.home-page .jumbo {
+
+  h3 {
+    font-family: "Arial", "Montserrat", sans-serif !important;
+  }
 }
 
 // 2. Polls
