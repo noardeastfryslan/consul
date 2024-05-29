@@ -52,6 +52,13 @@ h6 {
   }
 }
 
+.home-page .jumbo {
+
+  @include breakpoint(large) {
+    min-height: $line-height * 23;
+  }
+}
+
 // 2. Polls
 // --------------------
 

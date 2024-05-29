@@ -8,7 +8,7 @@ describe Budgets::BudgetComponent do
   before { sign_in(user) }
 
   describe "budget header" do
-    it "shows budget name and link to help" do
+    it "shows budget name and link to help", :consul do
       budget.update!(phase: "informing")
 
       render_inline Budgets::BudgetComponent.new(budget)
