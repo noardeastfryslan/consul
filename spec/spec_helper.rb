@@ -20,6 +20,7 @@ RSpec.configure do |config|
   config.include(EmailSpec::Helpers)
   config.include(EmailSpec::Matchers)
   config.include(CommonActions)
+  config.include(CustomCommonActions)
   config.include(ActiveSupport::Testing::TimeHelpers)
 
   config.define_derived_metadata(file_path: Regexp.new("/spec/components/")) do |metadata|

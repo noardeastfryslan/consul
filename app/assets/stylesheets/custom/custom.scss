@@ -55,7 +55,15 @@ h6 {
 .home-page .jumbo {
 
   @include breakpoint(large) {
-    min-height: $line-height * 23;
+    min-height: 0;
+  }
+
+  h1 {
+    font-size: rem-calc(36);
+
+    @include breakpoint(large) {
+      font-size: rem-calc(50);
+    }
   }
 }
 
