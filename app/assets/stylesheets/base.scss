@@ -493,6 +493,7 @@ aside {
   position: fixed;
   right: 24px;
   width: rem-calc(48);
+  z-index: 1;
 
   a {
     color: $text;
@@ -508,6 +509,20 @@ aside {
 .ssb-twitter,
 .ssb-facebook {
   color: #fff !important;
+}
+
+.ssb-twitter {
+  @include has-fa-icon(twitter-x, brands);
+  background: #000;
+}
+
+.social-share-button .ssb-icon {
+
+  &:hover,
+  &:focus {
+    background: #ececec;
+    color: #000 !important;
+  }
 }
 
 form {
@@ -581,6 +596,7 @@ body > header,
 
     .menu {
       margin-bottom: 0;
+      padding-left: $line-height / 2;
     }
   }
 
@@ -1177,13 +1193,6 @@ body > header,
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.figure-card {
-
-  &.legislation-process img {
-    min-height: rem-calc(185);
-  }
 }
 
 // 3. Footer
@@ -2859,8 +2868,13 @@ a {
 .fixed-mobile-content {
   top: 0 !important;
 
+  @include breakpoint(medium down) {
+    margin-top: $line-height;
+    padding-top: 0;
+  }
+
   &.is-stuck {
-    top: auto !important;
+    top: $line-height * 5 !important;
   }
 }
 
@@ -3142,6 +3156,10 @@ a {
   h2 {
     margin-bottom: $line-height;
   }
+}
+
+.read-notifications {
+  margin-top: rem-calc(-12);
 }
 
 // 13. Custom
