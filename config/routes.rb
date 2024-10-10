@@ -32,7 +32,6 @@ Rails.application.routes.draw do
   get "/consul.json", to: "installation#details"
   get "robots.txt", to: "robots#index"
 
-  resources :stats, only: [:index]
   resources :images, only: [:destroy]
   resources :documents, only: [:destroy]
   resources :follows, only: [:create, :destroy]
@@ -42,7 +41,8 @@ Rails.application.routes.draw do
   get "help",             to: "pages#show", id: "help/index",             as: "help"
   get "help/how-to-use",  to: "pages#show", id: "help/how_to_use/index",  as: "how_to_use"
   get "help/faq",         to: "pages#show", id: "faq",                    as: "faq"
-  get "bewonersbijeenkomst-lampen", to: "pages#show", id: "bewonersbijeenkomst_lampen", as: "bewonersbijeenkomst_lampen"
+  get "bewonersbijeenkomst-lampen", to: "pages#show", id: "bewonersbijeenkomst_lampen",
+                                    as: "bewonersbijeenkomst_lampen"
 
   # Static pages
   resources :pages, path: "/", only: [:show]
